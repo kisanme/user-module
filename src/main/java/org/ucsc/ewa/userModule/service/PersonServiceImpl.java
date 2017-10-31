@@ -12,9 +12,41 @@ public class PersonServiceImpl implements PersonService {
     private PersonRepository personRepository;
 
     @Override
-    public Person findOneById(Long id) {
+    public Person findPersonById(Long id) {
+
 
         Person one = personRepository.findOne(id);
+        if(one==null){
+            throw  new NullPointerException();
+        }
         return one;
+    }
+
+    @Override
+    public void savePerson(Person person) {
+        personRepository.save(person);
+    }
+
+    @Override
+    public void updatePerson(Person person) {
+        Long personId = person.getId();
+        if(personId==null){
+            throw  new NullPointerException();
+        }
+
+        Person foundPerson = personRepository.findOne(personId);
+
+        if(foundPerson==null){
+            throw  new NullPointerException();
+        }
+
+
+        foundPerson.setEmail(person.getEmail());
+        foundPerson.setFirstName(person.getFirstName());
+        foundPerson.setLastName(person.getLastName());
+        foundPerson.setMobileNumber(person.getMobileNumber());
+
+        personRepository.save(foundPerson);
+
     }
 }

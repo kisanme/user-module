@@ -4,5 +4,7 @@ import org.ucsc.ewa.userModule.model.Person;
 
 public interface PersonService {
 
-    Person findOneById(Long id);
+    Person findPersonById(Long id);
+    void savePerson(Person person);
+    void updatePerson(Person person);
 }
