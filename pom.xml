@@ -209,6 +209,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+        </dependency>
+
         <!-- temporary fix: below dependency should not be necessary as it is a transitive dependency.
         For some reason we can't build the app unless it is a first level dependency -->
         <dependency>
@@ -311,8 +316,8 @@
                 <version>2.2</version>
                 <configuration>
                     <server>tomcat-development-server</server>
-                    <port>9966</port>
-                    <path>/user</path>
+                    <port>9967</port>
+                    <path>/user-module</path>
                 </configuration>
             </plugin>
             <plugin>

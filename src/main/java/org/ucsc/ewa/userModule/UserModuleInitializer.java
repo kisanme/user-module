@@ -15,11 +15,11 @@
  */
 package org.ucsc.ewa.userModule;
 
-import org.ucsc.ewa.userModule.config.MvcCoreConfig;
-import org.ucsc.ewa.userModule.config.RootApplicationContextConfig;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
+import org.ucsc.ewa.userModule.config.MvcCoreConfig;
+import org.ucsc.ewa.userModule.config.RootApplicationContextConfig;
 
 
 public class UserModuleInitializer extends AbstractDispatcherServletInitializer {

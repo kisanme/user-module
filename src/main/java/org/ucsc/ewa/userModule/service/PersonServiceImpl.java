@@ -1,9 +1,9 @@
 package org.ucsc.ewa.userModule.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.ucsc.ewa.userModule.model.Person;
 import org.ucsc.ewa.userModule.repository.PersonRepository;
-import org.springframework.stereotype.Service;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -16,8 +16,8 @@ public class PersonServiceImpl implements PersonService {
 
 
         Person one = personRepository.findOne(id);
-        if(one==null){
-            throw  new NullPointerException();
+        if (one == null) {
+            throw new NullPointerException();
         }
         return one;
     }
@@ -30,14 +30,14 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void updatePerson(Person person) {
         Long personId = person.getId();
-        if(personId==null){
-            throw  new NullPointerException();
+        if (personId == null) {
+            throw new NullPointerException();
         }
 
         Person foundPerson = personRepository.findOne(personId);
 
-        if(foundPerson==null){
-            throw  new NullPointerException();
+        if (foundPerson == null) {
+            throw new NullPointerException();
         }
 
 
