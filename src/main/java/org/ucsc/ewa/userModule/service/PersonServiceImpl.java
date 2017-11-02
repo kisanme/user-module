@@ -23,6 +23,15 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
+    public Person findPersonByMobileNumber(String mobileNumber) {
+        Person one = personRepository.findOneByMobileNumber(mobileNumber);
+        if (one == null) {
+            throw new NullPointerException();
+        }
+        return one;
+    }
+
+    @Override
     public void savePerson(Person person) {
         personRepository.save(person);
     }

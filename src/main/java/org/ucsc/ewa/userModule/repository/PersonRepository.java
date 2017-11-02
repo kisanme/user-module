@@ -7,4 +7,6 @@ import org.ucsc.ewa.userModule.model.Person;
 
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long> {
+
+    Person findOneByMobileNumber(String mobileNumber);
 }
