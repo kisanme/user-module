@@ -50,10 +50,10 @@ public class PersonServiceImpl implements PersonService {
         }
 
 
-        foundPerson.setEmail(person.getEmail());
+//        foundPerson.setEmail(person.getEmail());
         foundPerson.setFirstName(person.getFirstName());
         foundPerson.setLastName(person.getLastName());
-        foundPerson.setMobileNumber(person.getMobileNumber());
+//        foundPerson.setMobileNumber(person.getMobileNumber());
 
         personRepository.save(foundPerson);
 

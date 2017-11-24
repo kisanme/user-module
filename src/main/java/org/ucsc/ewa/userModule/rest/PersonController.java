@@ -22,6 +22,7 @@ public class PersonController {
 
         try {
             Person personById = personService.findPersonById(personId);
+            System.out.println(personById.getFirstName());
             EwaResponse<Person> p = new EwaResponse<>();
             p.setData(personById);
             p.setStatusCode(200);

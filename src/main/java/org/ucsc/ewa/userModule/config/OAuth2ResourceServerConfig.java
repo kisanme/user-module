@@ -23,7 +23,7 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
         RemoteTokenServices tokenServices = new RemoteTokenServices();
         tokenServices.setClientId("clientIdPassword");
         tokenServices.setClientSecret("secret");
-        tokenServices.setCheckTokenEndpointUrl("http://localhost:9966/oauth-module/oauth/check_token");
+        tokenServices.setCheckTokenEndpointUrl("http://localhost:8080/oauth-module/oauth/check_token");
         return tokenServices;
     }
 
